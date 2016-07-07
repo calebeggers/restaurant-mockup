@@ -52,9 +52,9 @@ function getSpecial (){
 //  maps api key = AIzaSyAe2CZi1T36a6M2wX80RpcvkSo5qLX2E3g
 // flickr api key = ac1d68d86f7ac6c91836942a7af814db
 // flickr secret = 1e26f05f9ffc8458
-//////////////////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////////////
 
-//insert news html/template literal
+// create insert news html/template literal
 
 function newsTmpl(obj){
   return `
@@ -66,11 +66,10 @@ function newsTmpl(obj){
 }
 
 getNews().then(function(data){
-  console.log(data)
   $('.newsbox').append(newsTmpl(data));
 })
 
-// insert special template
+// create and insert special template
 
 function specialTmpl(obj){
   return `
@@ -82,12 +81,9 @@ function specialTmpl(obj){
 var special_id;
 var special;
 getSpecial().then(function(data){
-  console.log(data);
   special_id = data.menu_item_id;
   getMenu().then(function(food){
-    console.log(food)
-     special = food.sides.filter(function(menuitem){
-       console.log(menuitem.id)
+    special = food.sides.filter(function(menuitem){
       return menuitem.id === special_id
     })
     $('.newsbox').append(specialTmpl(special))
