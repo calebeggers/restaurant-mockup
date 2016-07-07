@@ -1,0 +1,177 @@
+#site {
+	margin: 10px;
+	width: 940px;
+}
+
+#header {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #b3b3b3;
+	margin-bottom: 20px;
+}
+
+.logo {
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.logo span {
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.social {
+	display: inline-block;
+	float: right;
+	margin-top: 10px;
+}
+
+.fa {
+	font-size: 25px;
+	padding: 5px;
+}
+
+.hero {
+	margin-bottom: 20px;
+}
+
+.news {
+	background-color: #ebebeb;
+	float: left;
+	height: 218px;
+	width: 268px;
+	padding: 10px;
+	margin-right: 15px;
+	border: 1px solid #b3b3b3;
+	display: inline-block;
+}
+
+.news-main {
+	font-size: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #b3b3b3;
+	margin-bottom: 10px;
+}
+
+.news-title {
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.news-post {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 20px;
+	font-size: 12px;
+	margin-top: 10px;
+	width: 268px;
+	height: 145px;
+}
+
+.news-date {
+	float: right;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.special {
+	background-color: #ebebeb;
+	height: 218px;
+	width: 268px;
+	padding: 10px;
+	margin-right: 20px;
+	margin-left: 20px;
+	border: 1px solid #b3b3b3;
+	display: inline-block;
+}
+
+.special img {
+	height: 100px;
+	width: 265px;
+	margin-bottom: 10px;
+}
+
+.special-main {
+	font-size: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #b3b3b3;
+	margin-bottom: 15px;
+}
+
+.special-title {
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.special-price {
+	float: right;
+	font-size: 14px;
+}
+
+.special-post {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 20px;
+	font-size: 12px;
+	margin-top: 10px;
+	width: 268px;
+	height: 43px;
+}
+
+.location {
+	background-color: #ebebeb;
+	float: right;
+	margin-left: 15px;
+	height: 218px;
+	width: 268px;
+	padding: 10px;
+	border: 1px solid #b3b3b3;
+	display: inline-block;
+}
+
+.location-main {
+	font-size: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #b3b3b3;
+	margin-bottom: 15px;
+}
+
+.address {
+	text-align: center;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.phone {
+	text-align: center;
+	font-size: 12px;
+}
+
+#menu {
+	float: left;
+	margin-top: 37px;
+	width: 700px;
+	height: 600px;
+	background-color: #ebebeb;
+}
+
+#photo-menu {
+	float: right;
+	margin-top: 37px;
+}
+
+.photo-menu-title {
+	font-size: 20px;
+	font-style: italic;
+}
+
+#photo-menu img{
+	padding-top: 16.5px;
+	padding-bottom: 16.5px;
+	height: 216px;
+	width: 216px;
+	display: block;
+}
