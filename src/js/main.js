@@ -1,5 +1,6 @@
 import $ from 'jquery'
 
+// CALLS FOR AJAX
 
 // Get news from API
 function getNews () {
@@ -8,26 +9,42 @@ function getNews () {
   })
 }
 
-getNews().then(function (response) {
-  console.log(response);
-})
-
 // Get menu API
 function getMenu() {
-return $.ajax({
-  url: "https://json-data.herokuapp.com/restaurant/menu/2"
-})
+  return $.ajax({
+    url: "https://json-data.herokuapp.com/restaurant/menu/2"
+  })
 }
 
-getMenu().then(function (response){
-  console.log(response)
-})
-
-
+// get days special from API
+function getSpecial (){
+  return $.ajax({
+    url: "https://json-data.herokuapp.com/restaurant/special/1"
+  })
+}
 // get images from flickr API
 
+var baseYURL = `https://api.flickr.com/services/`
+function getFlickr(){
+  return $.ajax({
+    url:`
+    ${baseYURL}rest/?method=flickr.photos.search&api_key=ac1d68d86f7ac6c91836942a7af814db&format=json&nojsoncallback=1&tags=food&page=1`,
+  })
+}
 
+function imageTmpl(obj){
+  return`
+  <img src="https://farm${obj.farm}.staticflickr.com/${obj.server}/${obj.id}_${obj.secret}.jpg">
+  `
+}
 
+getFlickr().then(function (data){
+  console.log(data);
+  data.photos.photo.forEach(function(obj){
+    $(".newsbox").append(imageTmpl(obj));
+
+  })
+})
 //  maps api key = AIzaSyAe2CZi1T36a6M2wX80RpcvkSo5qLX2E3g
 // flickr api key = ac1d68d86f7ac6c91836942a7af814db
 // flickr secret = 1e26f05f9ffc8458
@@ -46,4 +63,17 @@ function newsTmpl(obj){
 getNews().then(function(data){
   console.log(data)
   $('.newsbox').append(newsTmpl(data));
+})
+
+// insert special template
+
+function specialTmpl(obj){
+  return `
+  <span class="special-name">${obj.menu_item_id.price}</span>
+  `
+}
+
+getSpecial().then(function(data){
+  console.log(data);
+
 })
