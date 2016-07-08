@@ -1,8 +1,8 @@
 #site {
 	margin: 0 auto;
 	width: 940px;
-  left: 0px;
-  right: 0px;
+  	left: 0px;
+  	right: 0px;
 }
 
 #header {
@@ -45,8 +45,8 @@
 	margin-right: 15px;
 	border: 1px solid #b3b3b3;
 	display: inline-block;
-  overflow: scroll;
-  text-overflow: ellipsis;
+  	overflow: scroll;
+  	text-overflow: ellipsis;
 }
 
 .news-main {
@@ -174,17 +174,17 @@
 	/*PSYCH*/
 	float: left;
 	width: 345px;
-	height: 49px;
+	height: 50px;
 	border-bottom: 1px solid #b3b3b3;
 }
 
-ul.tabs{
+ul.tabs {
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
 }
 
-ul.tabs li{
+ul.tabs li {
 	background: none;
 	color: #000;
 	display: inline-block;
@@ -193,20 +193,20 @@ ul.tabs li{
 	border-bottom: 1px solid #b3b3b3;
 }
 
-ul.tabs li.current{
+ul.tabs li.current {
     border-color: #b3b3b3;
 	border-style: solid;
 	border-width: 1px 1px 0 1px;
 }
 
-.tab-content{
+.tab-content {
     display: none;
     background: white;
     padding: 15px;
     padding-left: 0;
 }
 
-.tab-content.current{
+.tab-content.current {
     display: block;
     border-bottom: 0;
 }
@@ -255,7 +255,7 @@ ul.tabs li.current{
 	font-weight: bold;
 	border-bottom: 1px solid #b3b3b3;
 	padding-bottom: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 .food-info {
@@ -355,10 +355,58 @@ form textarea {
 	font-style: italic;
 }
 
-#photo-menu img{
+#photo-menu img {
 	padding-top: 16.5px;
 	padding-bottom: 16.5px;
 	height: 216px;
 	width: 216px;
 	display: block;
+}
+
+.test-span {
+	position: absolute;
+	left: -200px;
+	background-color: #e7e7e7;
+    background: none repeat scroll 0 0 #F8F8F8;
+    color: #717171;
+    font-size: 13px;
+    height: 110px;
+    width: 245px;
+    display:none;
+    padding:0 20px;
+    border: 1px solid #b3b3b3;
+    margin-top: 10px;
+    z-index: 10;
+}
+
+.test-p {
+    float: right;
+    position: relative;
+    cursor: pointer;
+    top: -7px;
+    margin-left: 3px;
+}
+
+.test-p img {
+	right: 5px;
+	height: 15px;
+	width: 15px;
+}
+
+.test-p:hover span {
+	display: block;
+}
+
+.icon-title {
+	font-weight: bold;
+	font-size: 12px;
+	border-bottom: 1px solid #ebebeb;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.icon-content {
+	font-size: 10px;
+	padding-bottom: 5px;
 }
