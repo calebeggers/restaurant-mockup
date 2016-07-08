@@ -155,7 +155,190 @@
 	margin-top: 37px;
 	width: 700px;
 	height: 600px;
+}
+
+.box-of-shit {
+	width: 700px;
+	height: 51px;
+}
+
+.floating-this-left {
+	float: left;
+}
+
+.floating-this-right {
+	/*PSYCH*/
+	float: left;
+	width: 345px;
+	height: 50px;
+	border-bottom: 1px solid #b3b3b3;
+}
+
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+ul.tabs li{
+	background: none;
+	color: #000;
+	display: inline-block;
+	padding: 15px 20px;
+	cursor: pointer;
+	border-bottom: 1px solid #b3b3b3;
+}
+
+ul.tabs li.current{
+    border-color: #b3b3b3;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+}
+
+.tab-content{
+    display: none;
+    background: white;
+    padding: 15px;
+    padding-left: 0;
+}
+
+.tab-content.current{
+    display: inherit;
+    border-bottom: 0;
+}
+
+#tab-1 {
+	font-size: 14px;
+	line-height: 25px;
+}
+
+#tab-1 img {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#tab-2 {
+	padding-top: 20px;
+}
+
+.menuhead {
+	font-size: 20px;
+	border-bottom: 1px solid #b3b3b3;
+	font-weight: 200;
+	font-style: italic;
+	width: 675px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+.blank {
+	height: 10px;
+	width: 685px;
 	background-color: #ebebeb;
+	margin-top: 2px;
+}
+
+.menu-item {
+	padding-left: 15px;
+	height: 75px;
+}
+
+.menu-item-title {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-style: italic;
+	font-weight: bold;
+	border-bottom: 1px solid #b3b3b3;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.food-info {
+	height: 20px;
+}
+
+.food-name {
+	display: block;
+	float: left;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.food-price {
+	display: block;
+	float: right;
+}
+
+.food-desc {
+	font-size: 12px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 17px;
+	float: left;
+	width: 555px;
+	height: 35px;
+	margin: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	padding-right: 5px;
+	border-right: 1px solid #b3b3b3;
+}
+
+.food-icons {
+	width: 100px;
+	height: 35px;
+	float: right;
+	padding-top: 10px;
+}
+
+.apps {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+.sandies {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+.sides {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+form {
+	margin-top: 40px;
+}
+
+form input {
+	display: block;
+}
+
+form label {
+	display: block;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+form textarea {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#reserve-table {
+	display: block;
+	color: #fff;
+	background-color: #000;
+	border-radius: 2px;
+	border: 0;
+	margin-top: 20px;
 }
 
 #photo-menu {
