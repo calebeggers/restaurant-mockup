@@ -1,6 +1,8 @@
 #site {
-	margin: 10px;
+	margin: 0 auto;
 	width: 940px;
+  left: 0px;
+  right: 0px;
 }
 
 #header {
@@ -43,6 +45,8 @@
 	margin-right: 15px;
 	border: 1px solid #b3b3b3;
 	display: inline-block;
+  overflow: scroll;
+  text-overflow: ellipsis;
 }
 
 .news-main {
@@ -170,7 +174,7 @@
 	/*PSYCH*/
 	float: left;
 	width: 345px;
-	height: 50px;
+	height: 49px;
 	border-bottom: 1px solid #b3b3b3;
 }
 
@@ -203,7 +207,7 @@ ul.tabs li.current{
 }
 
 .tab-content.current{
-    display: inherit;
+    display: block;
     border-bottom: 0;
 }
 
