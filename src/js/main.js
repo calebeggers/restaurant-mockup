@@ -84,7 +84,7 @@ getSpecial().then(function(data){
     special = food.sides.filter(function(menuitem){
       return menuitem.id === special_id
     })
-    $('.newsbox').append(specialTmpl(special))
+    $('.special').append(specialTmpl(special))
   })
 })
 
@@ -155,8 +155,8 @@ function thanksTmpl(){
 `
 }
 
-function buttonClick() {
-  prevent.default()
+function buttonClick(event) {
+  event.preventDefault()
   $('.form').html(thanksTmpl);
 }
 
