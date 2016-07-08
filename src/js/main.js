@@ -55,9 +55,9 @@ function getSpecial (){
 function newsTmpl(obj){
   return `
   <div class="news-main">Latest News</div>
-  <span class="newsTitle">${obj.title}</span>
-  <span class="newsDate">${obj.date_published}</span>
-  <div class="newsPost">${obj.post}</div>
+  <span class="news-title">${obj.title}</span>
+  <span class="news-date">${obj.date_published}</span>
+  <div class="news-post">${obj.post}</div>
   `
 }
 
@@ -70,8 +70,9 @@ getNews().then(function(data){
 function specialTmpl(obj){
   return `
   <div class="special-main">Today's Special</div>
-  <class="special-title">${obj[0].item}${obj[0].price}</span>
   <img src="https://farm8.staticflickr.com/7477/15742927851_825073c2d6.jpg">
+  <span class="special-title">${obj[0].item}</span>
+  <span class="special-price">${obj[0].price}</span>
   <div class="special-post">${obj[0].description}</div>
   `
 }
@@ -115,7 +116,28 @@ function allTmpl(obj){
   <span class="food-price">${obj.price}</span>
   </div>
   <span class="food-desc">${obj.description}</span>
-  <div class="food-icons"></div>
+  <div class="food-icons">
+    <p class="test-p"><img src="./images/v.png"><span class="test-span">
+      <span class="icon-title">Allergy info</span>
+      <span class="icon-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+      </span>
+    </p>
+    <p class="test-p"><img src="./images/spice.png"><span class="test-span">
+      <span class="icon-title">Allergy info</span>
+      <span class="icon-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+    </span>
+    </p>
+    <p class="test-p"><img src="./images/favorite.png"><span class="test-span">
+    <span class="icon-title">Allergy info</span>
+      <span class="icon-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+    </span>
+    </p>
+    <p class="test-p"><img src="./images/exclaimation.png"><span class="test-span">
+      <span class="icon-title">Allergy info</span>
+      <span class="icon-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+    </span>
+    </p>
+  </div>
   </div>
   `
 }
