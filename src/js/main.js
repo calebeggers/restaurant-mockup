@@ -16,10 +16,6 @@ function getMenu() {
   })
 }
 
-getMenu().then(function (data){
-  console.log(data)
-})
-
 // get days special from API
 function getSpecial (){
   return $.ajax({
@@ -46,9 +42,9 @@ function getSpecial (){
 //   console.log("flickr data", data);
 //   data.photos.photo.forEach(function(obj){
 //     $(".newsbox").append(imageTmpl(obj));
-//
 //   })
 // })
+//
 //  maps api key = AIzaSyAe2CZi1T36a6M2wX80RpcvkSo5qLX2E3g
 // flickr api key = ac1d68d86f7ac6c91836942a7af814db
 // flickr secret = 1e26f05f9ffc8458
@@ -58,26 +54,28 @@ function getSpecial (){
 
 function newsTmpl(obj){
   return `
-  <span>Latest News</span>
+  <div class="news-main">Latest News</div>
   <span class="newsTitle">${obj.title}</span>
   <span class="newsDate">${obj.date_published}</span>
-  <span class="newsPost">${obj.post}</span>
+  <div class="newsPost">${obj.post}</div>
   `
 }
 
 getNews().then(function(data){
-  $('.newsbox').append(newsTmpl(data));
+  $('.news').append(newsTmpl(data));
 })
 
 // create and insert special template
 
 function specialTmpl(obj){
   return `
-  <class="special-name">${obj[0].item}${obj[0].price}</span>
+  <div class="special-main">Today's Special</div>
+  <class="special-title">${obj[0].item}${obj[0].price}</span>
   <img src="https://farm8.staticflickr.com/7477/15742927851_825073c2d6.jpg">
-  <span class="special-post">${obj[0].description}</span>
+  <div class="special-post">${obj[0].description}</div>
   `
 }
+
 var special_id;
 var special;
 getSpecial().then(function(data){
@@ -89,3 +87,77 @@ getSpecial().then(function(data){
     $('.newsbox').append(specialTmpl(special))
   })
 })
+
+
+
+// tabbed menu etc
+
+$(document).ready(function(){
+
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$( "#" + tab_id).addClass('current');
+	})
+})
+
+// template for items
+
+function allTmpl(obj){
+  return `
+  <div class="menu-item">
+  <div class="food-info">
+  <span class="food-name">${obj.item}</span>
+  <span class="food-price">${obj.price}</span>
+  </div>
+  <span class="food-desc">${obj.description}</span>
+  <div class="food-icons"></div>
+  </div>
+  `
+}
+
+// insert breakfast
+getMenu().then(function(data){
+  console.log(data.breakfast)
+  data.breakfast.forEach( function(obj){
+    console.log(obj);
+    $('.apps').append(allTmpl(obj))
+  })
+})
+
+// insert sandies
+getMenu().then(function(data){
+  console.log(data.breakfast)
+  data.sandwiches.forEach( function(obj){
+    console.log(obj);
+    $('.sandies').append(allTmpl(obj))
+  })
+})
+
+// insert sides
+getMenu().then(function(data){
+  console.log(data.breakfast)
+  data.sides.forEach( function(obj){
+    console.log(obj);
+    $('.sides').append(allTmpl(obj))
+  })
+})
+
+// functions for submit message
+
+function thanksTmpl(){
+  return`
+  <span class="Thanks">Thank you! Your reservation has been confirmed!</span>
+`
+}
+
+function buttonClick() {
+  prevent.default()
+  $('.form').html(thanksTmpl);
+}
+
+$('#reserve-table').on('click', buttonClick);
